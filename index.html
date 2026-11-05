@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Fada Madrinha | Unhas em Gel & Estética</title>
+<meta name="description" content="Studio Fada Madrinha: unhas em gel, alongamento, cílios, sobrancelhas e estética facial na Vila Mariana, São Paulo. Agende seu horário.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF6F0;--ivory:#FFFDF9;--rose:#E8D5D0;--blush:#F5EDEA;
+  --gold:#C4A265;--gold-light:#E8DCC8;--wine:#6B2D3E;--plum:#3D1A28;
+  --ink:#2C1E24;--muted:#8A7578;--line:rgba(107,45,62,.12);
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost','Helvetica Neue',Arial,sans-serif;
+  --max-w:1080px;--side:clamp(1.5rem,5vw,3rem);
+  --section-py:clamp(4.5rem,10vw,7.5rem);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-weight:300;line-height:1.75;font-size:clamp(.95rem,.92rem + .15vw,1.05rem);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;border:none;background:none;cursor:pointer}
+ul,ol{list-style:none}
+::selection{background:var(--wine);color:var(--gold-light)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.container{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:var(--side)}
+section{padding-block:var(--section-py)}
+.kicker{font-family:var(--sans);text-transform:uppercase;letter-spacing:.28em;font-size:.7rem;font-weight:500;color:var(--gold);display:block;margin-bottom:1rem}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.15;color:var(--ink);text-wrap:balance}
+h1{font-size:clamp(2.4rem,5.5vw,4.2rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.005em}
+h3{font-size:clamp(1.3rem,2.5vw,1.7rem)}
+p.lede{font-size:clamp(1rem,1.3vw,1.15rem);color:var(--muted);line-height:1.8;max-width:58ch}
+.text-center{text-align:center}.mx-auto{margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--sans);font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;padding:1.1em 2.2em;border-radius:999px;transition:all .4s var(--ease);white-space:nowrap;min-height:48px}
+.btn-primary{background:var(--wine);color:var(--gold-light);box-shadow:0 4px 20px rgba(107,45,62,.2)}
+.btn-primary:hover{background:#582432;transform:translateY(-2px);box-shadow:0 8px 30px rgba(107,45,62,.3)}
+.btn-gold{background:linear-gradient(135deg,#d4b87a,var(--gold));color:#3a2410;box-shadow:0 4px 20px rgba(196,162,101,.25)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(196,162,101,.4)}
+.btn-outline{border:1px solid var(--wine);color:var(--wine)}
+.btn-outline:hover{background:var(--wine);color:var(--gold-light);transform:translateY(-2px)}
+.btn-wa{background:#1fae5f;color:#fff;box-shadow:0 4px 20px rgba(31,174,95,.25)}
+.btn-wa:hover{background:#178a4b;transform:translateY(-2px);box-shadow:0 8px 30px rgba(31,174,95,.35)}
+.btn-group{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.btn-group.center{justify-content:center}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 0;transition:all .4s var(--ease)}
+.nav.scrolled{background:rgba(250,246,240,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line);padding:.8rem 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.brand{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--wine);line-height:1.1}
+.brand small{display:block;font-family:var(--sans);font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-top:.1rem}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:400;color:var(--ink);transition:color .3s}
+.nav-links a:hover{color:var(--wine)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;position:relative;background:var(--ivory)}
+.burger span{position:absolute;left:13px;right:13px;height:1.5px;background:var(--wine);transition:.35s var(--ease)}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.burger.open span:nth-child(1){top:22px;transform:rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){top:22px;transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:99;background:var(--plum);color:var(--gold-light);display:flex;flex-direction:column;justify-content:center;padding:2rem var(--side);transform:translateY(-100%);transition:transform .6s var(--ease);visibility:hidden}
+.mobile-menu.open{transform:none;visibility:visible}
+.mobile-menu a{font-family:var(--serif);font-size:clamp(1.8rem,7vw,2.8rem);padding:.5rem 0;border-bottom:1px solid rgba(232,220,200,.1);display:block}
+@media(max-width:768px){.nav-links{display:none}.burger{display:block}.nav .btn{display:none}}
+.hero{min-height:100svh;display:flex;align-items:center;padding-top:6rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,26,40,.4) 0%,rgba(61,26,40,.15) 40%,rgba(61,26,40,.75) 100%)}
+.hero-content{position:relative;z-index:1;color:var(--ivory);max-width:680px}
+.hero .kicker{color:var(--gold-light)}
+.hero h1{margin-bottom:1.2rem;text-shadow:0 2px 30px rgba(0,0,0,.2)}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero p{font-size:clamp(1rem,1.4vw,1.2rem);color:rgba(255,253,249,.88);max-width:42ch;margin-bottom:2rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:2rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,253,249,.2)}
+.hero-meta div b{font-family:var(--serif);font-size:1.7rem;font-weight:600;display:block;line-height:1;color:var(--ivory)}
+.hero-meta div span{font-size:.68rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-light);margin-top:.2rem;display:block}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
+.values-list{margin-top:2rem;display:grid;gap:.3rem}
+.values-list li{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:1.2rem 0;border-top:1px solid var(--line)}
+.values-list li:last-child{border-bottom:1px solid var(--line)}
+.values-list .num{font-family:var(--serif);font-size:1.3rem;color:var(--gold);font-style:italic}
+.values-list h4{font-size:1.25rem;margin-bottom:.1rem}
+.values-list p{font-size:.9rem;color:var(--muted)}
+.about-img{border-radius:6px;overflow:hidden;box-shadow:0 16px 50px rgba(61,26,40,.12);aspect-ratio:4/5}
+.about-img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+.services{background:var(--ivory)}
+.svc-category{margin-bottom:3rem}.svc-category:last-child{margin-bottom:0}
+.svc-cat-title{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--wine);padding-bottom:.8rem;margin-bottom:1.2rem;border-bottom:2px solid var(--gold-light);display:flex;align-items:center;gap:.6rem}
+.svc-cat-title::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none}
+.svc-list{display:grid;gap:0}
+.svc-item{display:flex;align-items:baseline;gap:.5rem;padding:.7rem 0}
+.svc-item:not(:last-child){border-bottom:1px dotted var(--line)}
+.svc-name{font-size:.95rem;color:var(--ink);white-space:nowrap}
+.svc-dots{flex:1;border-bottom:1px dotted rgba(107,45,62,.2);transform:translateY(-4px)}
+.svc-price{font-family:var(--serif);font-weight:600;font-size:1rem;color:var(--wine);white-space:nowrap}
+.svc-price.consult{font-family:var(--sans);font-size:.78rem;font-weight:400;color:var(--muted);font-style:italic}
+.svc-note{margin-top:2.5rem;background:var(--blush);border:1px solid var(--line);border-radius:6px;padding:1.3rem 1.6rem;font-size:.88rem;color:#6b5559;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.reviews{background:var(--plum);color:var(--gold-light)}
+.reviews .kicker{color:var(--gold)}
+.score-row{display:flex;flex-wrap:wrap;gap:2.5rem;align-items:center;justify-content:center;margin:2.5rem 0 3rem}
+.score-big{font-family:var(--serif);font-size:4rem;font-weight:600;line-height:.9;color:var(--ivory);text-align:center}
+.score-big small{display:block;font-family:var(--sans);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:.4rem;font-weight:400}
+.stars{color:var(--gold);font-size:1.1rem;letter-spacing:.1em}
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:3rem}
+.highlight-item{background:rgba(255,253,249,.05);border:1px solid rgba(232,220,200,.12);border-radius:8px;padding:1.3rem 1.5rem;font-size:.92rem;color:rgba(255,253,249,.82);display:flex;align-items:flex-start;gap:.7rem}
+.highlight-item svg{width:16px;height:16px;flex:none;color:var(--gold);margin-top:.2rem}
+.plat-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.plat-card{background:rgba(255,253,249,.04);border:1px solid rgba(232,220,200,.14);border-radius:8px;padding:1.8rem;text-align:center}
+.plat-card h4{font-size:1.4rem;color:var(--ivory);margin-bottom:.3rem}
+.plat-card .rate{font-family:var(--serif);font-size:2rem;color:var(--ivory);margin:.5rem 0 .3rem;line-height:1}
+.plat-card .count{font-size:.8rem;color:rgba(255,253,249,.6);margin-bottom:1.2rem}
+@media(max-width:600px){.plat-cards{grid-template-columns:1fr}}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3.5rem);align-items:stretch}
+.map-frame{border-radius:8px;overflow:hidden;border:1px solid var(--line);box-shadow:0 8px 30px rgba(61,26,40,.08);min-height:380px}
+.map-frame iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+.info-card{background:var(--ivory);border:1px solid var(--line);border-radius:8px;padding:clamp(1.5rem,3vw,2.2rem);display:flex;flex-direction:column;gap:0}
+.info-row{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--line);align-items:start}
+.info-row:first-child{padding-top:0}.info-row:last-of-type{border-bottom:none}
+.info-icon{width:38px;height:38px;border-radius:50%;background:var(--blush);color:var(--wine);display:grid;place-content:center;flex:none}
+.info-icon svg{width:17px;height:17px}
+.info-row h5{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.2rem;font-family:var(--sans);font-weight:500}
+.info-row p{font-size:.95rem;color:var(--ink)}
+.hours-list li{display:flex;justify-content:space-between;font-size:.9rem;padding:.35rem 0;border-bottom:1px dotted var(--line)}
+.hours-list li.closed{color:var(--muted)}
+.hours-list li.today{background:var(--blush);margin-inline:-.5rem;padding-inline:.5rem;border-radius:4px;border:none;font-weight:500}
+.status-pill{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .7rem;border-radius:999px;font-weight:500}
+.status-pill .led{width:7px;height:7px;border-radius:50%}
+.status-open{background:#e7f5ec;color:#178a4b}
+.status-open .led{background:#1fae5f;box-shadow:0 0 0 0 rgba(31,174,95,.4);animation:pulse 2s infinite}
+.status-closed{background:#fbeaea;color:var(--wine)}
+.status-closed .led{background:var(--wine)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,174,95,.4)}70%{box-shadow:0 0 0 6px rgba(31,174,95,0)}100%{box-shadow:0 0 0 0 rgba(31,174,95,0)}}
+@media(max-width:768px){.loc-grid{grid-template-columns:1fr}}
+.booking{background:linear-gradient(135deg,#5a2838,var(--plum));color:var(--ivory);text-align:center}
+.booking h2{color:var(--ivory);margin:1rem auto;max-width:18ch}
+.booking h2 em{font-style:italic;color:var(--gold-light)}
+.booking p{max-width:48ch;margin:0 auto 2rem;color:rgba(255,253,249,.8);font-size:1.05rem}
+.footer{background:var(--plum);color:rgba(255,253,249,.65);padding:3.5rem 0 2rem}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(232,220,200,.12)}
+.footer .brand{color:var(--ivory);margin-bottom:1rem}.footer .brand small{color:var(--gold)}
+.foot-col h6{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;font-family:var(--sans);font-weight:500}
+.foot-col a,.foot-col p{display:block;font-size:.9rem;margin-bottom:.6rem;transition:color .3s}
+.foot-col a:hover{color:var(--ivory)}
+.socials{display:flex;gap:.7rem;margin-top:1.2rem}
+.socials a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(232,220,200,.2);display:grid;place-content:center;color:var(--gold-light);transition:.3s var(--ease)}
+.socials a:hover{background:var(--gold);color:#3a2410;border-color:var(--gold);transform:translateY(-2px)}
+.socials svg{width:17px;height:17px}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;padding-top:1.8rem;font-size:.76rem;color:rgba(255,253,249,.4)}
+@media(max-width:768px){.foot-grid{grid-template-columns:1fr}}
+.fab{position:fixed;right:clamp(1rem,3vw,1.8rem);bottom:clamp(1rem,3vw,1.8rem);z-index:90;width:56px;height:56px;border-radius:50%;background:#1fae5f;color:#fff;display:grid;place-content:center;box-shadow:0 10px 30px rgba(31,174,95,.4);transition:transform .3s var(--ease)}
+.fab:hover{transform:scale(1.08)}.fab svg{width:28px;height:28px}
+.progress-bar{position:fixed;top:0;left:0;height:3px;z-index:110;background:linear-gradient(90deg,var(--gold),var(--wine));width:0}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#inicio" class="brand">Fada Madrinha<small>Studio de Beleza</small></a>
+    <nav class="nav-links">
+      <a href="#studio">O Studio</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/5511951586187?text=Ol%C3%A1!%20Conheci%20o%20Studio%20Fada%20Madrinha%20pelo%20site%20e%20gostaria%20de%20agendar." target="_blank" rel="noopener">Agendar</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mmenu">
+  <a href="#studio">O Studio</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#avaliacoes">Avaliações</a>
+  <a href="#localizacao">Localização</a>
+  <a href="https://wa.me/5511951586187?text=Ol%C3%A1!" target="_blank" rel="noopener" style="color:var(--gold);margin-top:1rem;font-family:var(--sans);font-size:1rem;text-transform:uppercase;letter-spacing:.14em;border:none">Agendar Horário →</a>
+</div>
+
+<main>
+  <!-- HERO (IMAGEM 1/2) -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1920&q=80&auto=format" alt="Unhas em gel impecáveis" fetchpriority="high">
+  </div>
+  <div class="container hero-content">
+    <span class="kicker">Vila Mariana · São Paulo</span>
+    <h1>Realce sua beleza.<br>Viva sua experiência<br><em>Fada Madrinha.</em></h1>
+    <p>Um espaço dedicado à beleza, ao autocuidado e aos detalhes que fazem toda a diferença.</p>
+    <div class="btn-group">
+      <a class="btn btn-gold" href="https://wa.me/5511951586187?text=Ol%C3%A1!%20Conheci%20o%20Studio%20Fada%20Madrinha%20pelo%20site%20e%20gostaria%20de%20agendar." target="_blank" rel="noopener">Agendar Horário</a>
+      <a class="btn btn-outline" href="#servicos" style="border-color:rgba(255,253,249,.4);color:var(--ivory)">Conhecer Serviços</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>5,0 ★</b><span>No Google Maps</span></div>
+      <div><b>78+</b><span>Avaliações públicas</span></div>
+      <div><b>4</b><span>Especialidades</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE O STUDIO -->
+<section id="studio">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="kicker">O Studio</span>
+        <h2>Um jardim onde cada detalhe floresce</h2>
+        <p class="lede" style="margin-top:1.2rem">O Studio Fada Madrinha nasceu do desejo de unir técnica apurada e acolhimento genuíno. Cada atendimento começa pela escuta — entendemos suas preferências e só então transformamos tudo em um trabalho feito com calma e precisão.</p>
+        <p class="lede" style="margin-top:1rem">Da manicure clássica ao alongamento mais elaborado, da definição das sobrancelhas ao olhar marcante dos cílios, cuidamos da sua beleza inteira com materiais higienizados, produtos selecionados e atenção especial aos pequenos detalhes.</p>
+        <ul class="values-list">
+          <li><span class="num">01</span><div><h4>Atendimento atencioso</h4><p>Tempo para ouvir, orientar e cuidar de verdade.</p></div></li>
+          <li><span class="num">02</span><div><h4>Cuidado com os detalhes</h4><p>Acabamento caprichado, do corte ao brilho final.</p></div></li>
+          <li><span class="num">03</span><div><h4>Ambiente acolhedor</h4><p>Espaço tranquilo, limpo e pensado para relaxar.</p></div></li>
+          <li><span class="num">04</span><div><h4>Serviços especializados</h4><p>Unhas e estética reunidos em um só lugar.</p></div></li>
+        </ul>
+      </div>
+      <!-- IMAGEM 2/2 -->
+      <div class="about-img reveal">
+        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d57?w=900&q=80&auto=format" alt="Ambiente acolhedor do Studio Fada Madrinha" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SERVIÇOS E PREÇOS -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="text-center" style="max-width:600px;margin:0 auto 3.5rem">
+      <span class="kicker">Nosso Menu</span>
+      <h2>Serviços e Especialidades</h2>
+      <p class="lede mx-auto" style="margin-top:1rem">Cada procedimento tem tempo próprio e acabamento garantido. Valores de referência conforme catálogo público do Booksy.</p>
+    </div>
+
+    <div class="svc-category reveal">
+      <div class="svc-cat-title">Unhas</div>
+      <div class="svc-list">
+        <div class="svc-item"><span class="svc-name">Manicure</span><span class="svc-dots"></span><span class="svc-price">R$ 53</span></div>
+        <div class="svc-item"><span class="svc-name">Pedicure</span><span class="svc-dots"></span><span class="svc-price">R$ 65</span></div>
+        <div class="svc-item"><span class="svc-name">Manicure com esmaltação em gel</span><span class="svc-dots"></span><span class="svc-price">R$ 130</span></div>
+        <div class="svc-item"><span class="svc-name">Pedicure com esmaltação em gel</span><span class="svc-dots"></span><span class="svc-price">R$ 150</span></div>
+        <div class="svc-item"><span class="svc-name">Alongamento em gel</span><span class="svc-dots"></span><span class="svc-price">R$ 350</span></div>
+        <div class="svc-item"><span class="svc-name">Alongamento em fibra</span><span class="svc-dots"></span><span class="svc-price">R$ 380</span></div>
+        <div class="svc-item"><span class="svc-name">Banho em gel</span><span class="svc-dots"></span><span class="svc-price">R$ 260</span></div>
+        <div class="svc-item"><span class="svc-name">Blindagem</span><span class="svc-dots"></span><span class="svc-price">R$ 130</span></div>
+        <div class="svc-item"><span class="svc-name">Francesinha</span><span class="svc-dots"></span><span class="svc-price">R$ 15</span></div>
+        <div class="svc-item"><span class="svc-name">Babyboomer</span><span class="svc-dots"></span><span class="svc-price">R$ 40</span></div>
+        <div class="svc-item"><span class="svc-name">Pó cromo</span><span class="svc-dots"></span><span class="svc-price">R$ 15</span></div>
+        <div class="svc-item"><span class="svc-name">Esmalte magnético</span><span class="svc-dots"></span><span class="svc-price">R$ 15</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção até 15 dias</span><span class="svc-dots"></span><span class="svc-price">R$ 180</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção de 16 a 30 dias</span><span class="svc-dots"></span><span class="svc-price">R$ 200</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção acima de 30 dias</span><span class="svc-dots"></span><span class="svc-price">R$ 230</span></div>
+        <div class="svc-item"><span class="svc-name">Retirada do alongamento</span><span class="svc-dots"></span><span class="svc-price">R$ 120</span></div>
+        <div class="svc-item"><span class="svc-name">Reconstrução de unha quebrada</span><span class="svc-dots"></span><span class="svc-price">R$ 25</span></div>
+        <div class="svc-item"><span class="svc-name">Nail art</span><span class="svc-dots"></span><span class="svc-price consult">sob consulta</span></div>
+      </div>
+    </div>
+
+    <div class="svc-category reveal">
+      <div class="svc-cat-title">Cílios</div>
+      <div class="svc-list">
+        <div class="svc-item"><span class="svc-name">Fio a fio</span><span class="svc-dots"></span><span class="svc-price">R$ 140</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção fio a fio</span><span class="svc-dots"></span><span class="svc-price">R$ 200</span></div>
+        <div class="svc-item"><span class="svc-name">Volume brasileiro</span><span class="svc-dots"></span><span class="svc-price">R$ 150</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção volume brasileiro</span><span class="svc-dots"></span><span class="svc-price">R$ 230</span></div>
+        <div class="svc-item"><span class="svc-name">Volume egípcio</span><span class="svc-dots"></span><span class="svc-price">R$ 180</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção volume egípcio</span><span class="svc-dots"></span><span class="svc-price">R$ 260</span></div>
+        <div class="svc-item"><span class="svc-name">Volume russo</span><span class="svc-dots"></span><span class="svc-price">R$ 200</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção volume russo</span><span class="svc-dots"></span><span class="svc-price">R$ 340</span></div>
+        <div class="svc-item"><span class="svc-name">Volume Fox</span><span class="svc-dots"></span><span class="svc-price">R$ 200</span></div>
+        <div class="svc-item"><span class="svc-name">Manutenção volume Fox</span><span class="svc-dots"></span><span class="svc-price">R$ 340</span></div>
+        <div class="svc-item"><span class="svc-name">Lash lifting</span><span class="svc-dots"></span><span class="svc-price">R$ 220</span></div>
+      </div>
+    </div>
+
+    <div class="svc-category reveal">
+      <div class="svc-cat-title">Sobrancelhas</div>
+      <div class="svc-list">
+        <div class="svc-item"><span class="svc-name">Designer de sobrancelhas</span><span class="svc-dots"></span><span class="svc-price">R$ 68</span></div>
+        <div class="svc-item"><span class="svc-name">Brow lamination</span><span class="svc-dots"></span><span class="svc-price">R$ 220</span></div>
+      </div>
+    </div>
+
+    <div class="svc-category reveal">
+      <div class="svc-cat-title">Estética Facial</div>
+      <div class="svc-list">
+        <div class="svc-item"><span class="svc-name">Micropigmentação</span><span class="svc-dots"></span><span class="svc-price">R$ 780</span></div>
+        <div class="svc-item"><span class="svc-name">Hidra-Gloss</span><span class="svc-dots"></span><span class="svc-price">R$ 150</span></div>
+        <div class="svc-item"><span class="svc-name">Depilação facial completa</span><span class="svc-dots"></span><span class="svc-price">R$ 85</span></div>
+        <div class="svc-item"><span class="svc-name">Buço na linha</span><span class="svc-dots"></span><span class="svc-price">R$ 30</span></div>
+        <div class="svc-item"><span class="svc-name">Costeleta na cera</span><span class="svc-dots"></span><span class="svc-price">R$ 30</span></div>
+        <div class="svc-item"><span class="svc-name">Queixo na cera</span><span class="svc-dots"></span><span class="svc-price">R$ 30</span></div>
+      </div>
+    </div>
+
+    <div class="svc-note reveal">
+      <p><strong>Importante:</strong> valores de referência do Booksy, sujeitos a alteração. Confirme pelo WhatsApp ou Booksy antes de agendar.</p>
+      <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+        <a class="btn btn-wa" href="https://wa.me/5511951586187?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20pre%C3%A7os." target="_blank" rel="noopener">Confirmar valores</a>
+        <a class="btn btn-outline" href="https://booksy.com/pt-br/408568_studio-fada-madrinha_manicure-nail-designer_1047773_sao-paulo" target="_blank" rel="noopener">Ver no Booksy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="reviews" id="avaliacoes">
+  <div class="container text-center">
+    <span class="kicker">Confiança Real</span>
+    <h2 style="color:var(--ivory)">O que nossas clientes dizem</h2>
+    <div class="score-row">
+      <div class="score-big">5,0<small>Nota máxima</small></div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <p style="font-size:.85rem;color:rgba(255,253,249,.6);margin-top:.3rem">Baseado em avaliações públicas verificadas</p>
+      </div>
+    </div>
+    <div class="highlights">
+      <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Ambiente agradável e acolhedor</div>
+      <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Limpeza e higiene dos materiais</div>
+      <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Atendimento atencioso do começo ao fim</div>
+      <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Qualidade do acabamento e resultados</div>
+      <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Nail art e atenção aos mínimos detalhes</div>
+      <div class="highlight-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Satisfação recorrente das clientes</div>
+    </div>
+    <div class="plat-cards">
+      <div class="plat-card">
+        <h4>Google Maps</h4>
+        <div class="rate">5,0 ★</div>
+        <div class="count">78 avaliações públicas</div>
+        <a class="btn btn-gold" href="https://maps.app.goo.gl/GgNfpeSxcKnxEHXGA?g_st=aw" target="_blank" rel="noopener">Ver avaliações ↗</a>
+      </div>
+      <div class="plat-card">
+        <h4>Booksy</h4>
+        <div class="rate">5,0 ★</div>
+        <div class="count">13 avaliações verificadas</div>
+        <a class="btn btn-outline" style="border-color:rgba(232,220,200,.3);color:var(--gold-light)" href="https://booksy.com/pt-br/408568_studio-fada-madrinha_manicure-nail-designer_1047773_sao-paulo" target="_blank" rel="noopener">Abrir perfil ↗</a>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:rgba(255,253,249,.45);margin-top:2rem">Os temas acima resumem elogios recorrentes encontrados nas plataformas públicas. Leia os comentários originais clicando nos botões.</p>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="container">
+    <div class="text-center" style="max-width:560px;margin:0 auto 3rem">
+      <span class="kicker">Venha Nos Visitar</span>
+      <h2>Estamos na Vila Mariana</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="map-frame reveal">
+        <iframe title="Mapa Studio Fada Madrinha" src="https://www.google.com/maps?q=R.%20Dr.%20Am%C3%A2ncio%20de%20Carvalho%2C%20215%20-%20Vila%20Mariana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%20CEP%2004012-090&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-row">
+          <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><h5>Endereço</h5><p>R. Dr. Amâncio de Carvalho, 215<br>Vila Mariana · São Paulo – SP<br>CEP 04012-090</p></div>
+        </div>
+        <div class="info-row">
+          <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <div><h5>Telefone & WhatsApp</h5><p>(11) 95158-6187</p></div>
+        </div>
+        <div class="info-row">
+          <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div style="width:100%">
+            <h5 style="display:flex;justify-content:space-between;align-items:center;width:100%">Horário de funcionamento<span class="status-pill" id="statusPill"><span class="led"></span><span id="statusText">…</span></span></h5>
+            <ul class="hours-list" id="hoursList">
+              <li data-day="1"><span>Segunda-feira</span><span>10h às 20h</span></li>
+              <li data-day="2" class="closed"><span>Terça-feira</span><span>Fechado</span></li>
+              <li data-day="3"><span>Quarta-feira</span><span>10h às 20h</span></li>
+              <li data-day="4"><span>Quinta-feira</span><span>10h às 20h</span></li>
+              <li data-day="5"><span>Sexta-feira</span><span>10h às 20h</span></li>
+              <li data-day="6"><span>Sábado</span><span>10h às 18h</span></li>
+              <li data-day="0" class="closed"><span>Domingo</span><span>Fechado</span></li>
+            </ul>
+          </div>
+        </div>
+        <p style="font-size:.8rem;color:var(--muted);margin-top:.8rem">* Horários da listagem pública do Google Maps. Recomendamos confirmar antes da visita.</p>
+        <div class="btn-group" style="margin-top:1.5rem">
+          <a class="btn btn-primary" href="https://maps.app.goo.gl/GgNfpeSxcKnxEHXGA?g_st=aw" target="_blank" rel="noopener">Traçar rota ↗</a>
+          <a class="btn btn-wa" href="https://wa.me/5511951586187?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Falar agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- AGENDAMENTO -->
+<section class="booking">
+  <div class="container">
+    <span class="kicker" style="color:var(--gold)">Seu momento é agora</span>
+    <h2>Pronta para viver sua<br><em>experiência Fada Madrinha?</em></h2>
+    <p>Escolha o canal mais fácil para você. Respondemos rápido e ajudamos a montar o melhor horário para o seu cuidado.</p>
+    <div class="btn-group center">
+      <a class="btn btn-gold" href="https://wa.me/5511951586187?text=Ol%C3%A1!%20Conheci%20o%20Studio%20Fada%20Madrinha%20pelo%20site%20e%20gostaria%20de%20agendar." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="btn btn-outline" style="border-color:rgba(255,253,249,.35);color:var(--ivory)" href="https://booksy.com/pt-br/408568_studio-fada-madrinha_manicure-nail-designer_1047773_sao-paulo" target="_blank" rel="noopener">Reservar no Booksy</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a href="#inicio" class="brand">Fada Madrinha<small>Studio de Beleza</small></a>
+        <p style="max-width:32ch">Unhas em gel, cílios, sobrancelhas e estética facial com atendimento premium na Vila Mariana.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/fadamadrinhanails" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://wa.me/5511951586187" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.2.1.8-.1 1.3Z"/></svg></a>
+          <a href="https://maps.app.goo.gl/GgNfpeSxcKnxEHXGA?g_st=aw" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h6>Navegação</h6>
+        <a href="#studio">O Studio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#localizacao">Localização</a>
+      </div>
+      <div class="foot-col">
+        <h6>Contato</h6>
+        <a href="https://wa.me/5511951586187" target="_blank" rel="noopener">(11) 95158-6187</a>
+        <a href="https://www.instagram.com/fadamadrinhanails" target="_blank" rel="noopener">@fadamadrinhanails</a>
+        <a href="https://booksy.com/pt-br/408568_studio-fada-madrinha_manicure-nail-designer_1047773_sao-paulo" target="_blank" rel="noopener">Agendar no Booksy</a>
+        <p style="margin-top:.5rem">R. Dr. Amâncio de Carvalho, 215<br>Vila Mariana · São Paulo – SP</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Studio Fada Madrinha. Todos os direitos reservados.</span>
+      <span>Preços e horários sujeitos a confirmação junto ao estabelecimento.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5511951586187?text=Ol%C3%A1!%20Conheci%20o%20Studio%20Fada%20Madrinha%20pelo%20site%20e%20gostaria%20de%20agendar." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.2.1.8-.1 1.3Z"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var nav = document.getElementById('nav');
+  var prog = document.getElementById('progress');
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 30);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  }, {passive:true});
+  var burger = document.getElementById('burger');
+  var mmenu = document.getElementById('mmenu');
+  function toggleMenu(force){
+    var open = force !== undefined ? force : !mmenu.classList.contains('open');
+    mmenu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ toggleMenu(); });
+  mmenu.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(){ toggleMenu(false); });
+  });
+  if(!reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:0.12, rootMargin:'0px 0px -6% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+  var schedule = {0:null,1:[10,20],2:null,3:[10,20],4:[10,20],5:[10,20],6:[10,18]};
+  var now = new Date();
+  var day = now.getDay();
+  var hour = now.getHours() + now.getMinutes()/60;
+  var todays = schedule[day];
+  var isOpen = todays && hour >= todays[0] && hour < todays[1];
+  var pill = document.getElementById('statusPill');
+  var txt = document.getElementById('statusText');
+  pill.className = 'status-pill ' + (isOpen ? 'status-open' : 'status-closed');
+  txt.textContent = isOpen ? 'Aberto agora' : 'Fechado agora';
+  var hl = document.querySelector('#hoursList li[data-day="'+day+'"]');
+  if(hl){
+    hl.classList.add('today');
+    var tag = document.createElement('span');
+    tag.style.cssText = 'font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-left:.5rem';
+    tag.textContent = 'Hoje';
+    hl.firstChild.appendChild(tag);
+  }
+  document.querySelectorAll('a[href^="#"]:not(.brand)').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = this.getAttribute('href');
+      if(id.length < 2) return;
+      var el = document.querySelector(id);
+      if(!el) return;
+      e.preventDefault();
+      var top = el.getBoundingClientRect().top + window.scrollY - (nav.offsetHeight + 12);
+      window.scrollTo({top:top, behavior: reduce ? 'auto' : 'smooth'});
+    });
+  });
+})();
+</script>
+</body>
+</html>
